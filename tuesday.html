@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cherish&family=Comforter+Brush&family=Kaushan+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./tuesday.css">
+      <title>Child Name Registration</title>
+
+</head>
+<body>
+
+    <div class="modes">
+       <div class="cover-logo"> <img src="./6.png" alt="logo"></div>
+        <h2>Tuesday Attendance Page</h2>
+      <!-- ******************************8 -->
+        <div class="btn-cover">
+        <a href="index.html"><button class="btn">Back to Home</button></a>
+        <a href="./child.html"><button class="btn">Add a Name</button></a>
+       </div>
+
+    </div>
+
+
+    <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
+
+    <div class="form-cont">
+      
+      <form id="dataEntryForm">
+        <h2>Enter Tuesday Attendance Below</h2>     
+        <input type="date" id="eventDate" required>
+        <p id="dateError" class="error-message"></p>
+        <input type="number" id="numBoys" min="0" value="" placeholder="Number of Boys" required>
+        <input type="number" id="numGirls" min="0" value="" placeholder="Number of Girls" required>
+        <input type="text" id="totalSum" value="" placeholder="Total Attendance" readonly>
+        <button type="submit">Save</button>
+        <!-- <input type="submit" value="Save Data"> -->
+      </form>
+
+
+    </div>
+<!-- ****************************** -->
+    
+  
+</body>
+
+<script src="./tuesday.js"></script>
+</html>
