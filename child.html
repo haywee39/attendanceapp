@@ -31,14 +31,19 @@
     <!-- &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& -->
     <div class="form-cont">
       
-       <form id="childForm" method="POST" action="https://script.google.com/macros/s/AKfycbzZ_12Hzl_Tlyh6rG-2YaQSXQbLxlrKU4FdKtuNCd-LLl9motSFZ-vuVnhjSrLBiaI6/exec">
+       <form id="childForm">
             <h2>Add New Child Name Below</h2>
             <input type="text" name="name" placeholder="Full Name" required>
-            <input type="text" name="gender" placeholder="Gender" >
+            <select name="gender" required >
+                <option value="">Select gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
             <input type="text" name="address" placeholder="Address" required>
             <input type="tel" name="phone" placeholder="Phone Number" required>
             <input type="date" name="dob" placeholder="Date of Birth" required>
             <button type="submit">Save</button>
+            <p id="status"></p>
         </form>
 
     </div>
