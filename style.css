@@ -7,6 +7,7 @@
 body, html{
     scroll-behavior: smooth;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
 }
 
 .home{
@@ -18,14 +19,14 @@ body, html{
     height:auto;
     padding: 30px;
     gap: 20px;
-    background-image: url(./congre.jpeg);
+    background-image: url(./wyf.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
 }
 
 .church-logo{
-    display: flex;
+    display: flex; 
     gap: 10px;
     width: 70vw;
     height: 30vh;
@@ -122,6 +123,7 @@ body, html{
     .home{
     padding: 30px 0;
     gap: 20px;
+    background-attachment: scroll;
     }
 
     .church-logo{
