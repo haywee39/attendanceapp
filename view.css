@@ -25,26 +25,11 @@ body, html{
     background-position: center center;
 }
 
-.church-logo{
-    display: flex; 
-    gap: 10px;
-    width: 70vw;
-    height: 30vh;
-    align-items: center;
-    justify-content: center;
-}
-
-.home img{
-    width: 100px;
-    height: 100px;
-    background: #fff;
-}
-
 .text{
     display: flex;
     flex-direction: column;
     width: 70vw;
-    height: 30vh;
+    height: 35vh;
     align-items: center;
     justify-content: center;
     color: white;
@@ -69,7 +54,7 @@ body, html{
     /* background: blue; */
 }
 .btn{
-    width: 300px;
+    width: 250px;
     height: 65px;
     border: white 1px solid;
     border-radius: 10px;
@@ -86,7 +71,6 @@ body, html{
 }
 /* &&&&&&&&&&&&&&&&&&&&&&&&&&& */
 .dev{
-    margin-top: 2000px;
     position: fixed;
     right: 20px;
     bottom: 20px;
@@ -94,14 +78,14 @@ body, html{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     color: white;
     /* background-color: orange; */
 }
 .dev img{
-    width: 80px; 
-    height: 80px; 
+    width: 100px; 
+    height: 100px; 
     border-radius:50% 
 }
 .icons{
@@ -171,7 +155,6 @@ body, html{
     position: relative;
     right: 0;
     bottom: 0;
-    /* top: 0; */
     left: 0;
     width:100%;
     height: auto;

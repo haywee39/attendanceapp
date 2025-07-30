@@ -33,9 +33,10 @@
       
        <form id="childForm">
             <h2>Add New Child Name Below</h2>
+            <input type="hidden" name="formType" value="registration">
             <input type="text" name="name" placeholder="Full Name" required>
-            <select name="gender" required >
-                <option value="">Select gender</option>
+            <select name="gender" placeholder="Gender" required >
+                <option value="">Select Gender</option>
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
             </select>

@@ -40,10 +40,32 @@
         <input type="number" id="numGirls" min="0" value="" placeholder="Number of Girls" required>
         <input type="text" id="totalSum" value="" placeholder="Total Attendance" readonly>
         <button type="submit">Save</button>
+        <p id="status"></p>
       </form>
 
     </div>
 <!-- ****************************** -->
+   <script>
+      document.getElementById('dataEntryForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      const params = new URLSearchParams(formData);
+
+      fetch("https://script.google.com/macros/s/AKfycbyyXUwbfagTAeYBCrv4MidX8u6C0cY6PlLljhcVWWPWpyXeinBQ28cfuXRYP_Sl3IaBZA/exec", {
+        method: "POST",
+        body: params
+      })
+      .then(res => res.text())
+      .then(text => {
+        document.getElementById('status').innerText = text === "Success" ? "Date registered successfully!" : text;
+        form.reset();
+      })
+      .catch(err => {
+        document.getElementById('status').innerText = "Error: " + err.message;
+      });
+    });
+    </script>
     
   
 </body>
