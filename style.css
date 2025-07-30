@@ -49,15 +49,13 @@ body, html{
     color: white;
     text-shadow: 2px 2px 2px black;
     background-color: gray;
-    /* opacity: 0.9; */
+    opacity: 0.9;
 }
 .text h1{
     font-size:45px;
-    /* z-index: 10; */
 }
 .text h2{
     font-size: 35px;
-    /* z-index: 10; */
 }
 
 .btn-cover{
@@ -188,8 +186,6 @@ body, html{
     width: 40%;
     align-items: center;
     justify-content: space-evenly;
-}  
-
-    
+}     
       
 }
