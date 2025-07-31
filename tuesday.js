@@ -1,9 +1,10 @@
+
+        const dataEntryForm = document.getElementById('dataEntryForm');
         const eventDateInput = document.getElementById('eventDate');
         const dateError = document.getElementById('dateError');
         const numBoysInput = document.getElementById('numBoys');
         const numGirlsInput = document.getElementById('numGirls');
         const totalSumInput = document.getElementById('totalSum');
-        const dataEntryForm = document.getElementById('dataEntryForm');
 
         // Function to check if a given date is a Tuesday
         function isTuesday(dateString) {
@@ -22,8 +23,8 @@
                     this.setCustomValidity(''); // Mark as valid
                 }
             } else {
-                 dateError.textContent = 'Please select a date.';
-                 this.setCustomValidity('Please select a date.');
+                dateError.textContent = 'Please select a date.';
+                this.setCustomValidity('Please select a date.');
             }
         });
 
@@ -38,12 +39,9 @@
         numBoysInput.addEventListener('input', calculateTotal);
         numGirlsInput.addEventListener('input', calculateTotal);
 
-        // Initial calculation when page loads
-        document.addEventListener('DOMContentLoaded', calculateTotal);
-
         // Handle form submission
-        dataEntryForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
+        dataEntryForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
 
             // Re-validate date just before submission
             if (eventDateInput.value && !isTuesday(eventDateInput.value)) {
@@ -52,21 +50,21 @@
                 return;
             }
 
-            // You can now collect your form data
-            const date = eventDateInput.value;
-            const boys = parseInt(numBoysInput.value);
-            const girls = parseInt(numGirlsInput.value);
-            const total = parseInt(totalSumInput.value);
+            const form = e.target;
+            const formData = new FormData(form);
+            const params = new URLSearchParams(formData);
 
-            console.log('--- Form Data ---');
-            console.log('Date:', date);
-            console.log('Boys:', boys);
-            console.log('Girls:', girls);
-            console.log('Total:', total);
-            console.log('-----------------');
-
-            alert('Data saved successfully! (Check console for details)');
-
-            // In a real application, you would send this data to a server here
-            // e.g., using fetch() or XMLHttpRequest
+            fetch("https://script.google.com/macros/s/AKfycbyagkDt6oTv1QfDEILHcPPU0qlurTZ8FTKRaW_q6Hkzn9t_D9W2BI1UyPoVmboJpO67qg/exec", {
+                method: "POST",
+                body: params
+            })
+            .then(res => res.text())
+            .then(text => {
+                document.getElementById('status').innerText = text === "Success" ? "Attendance recorded successfully!" : text;
+                form.reset();
+                calculateTotal(); // Recalculate total to zero after reset
+            })
+            .catch(err => {
+                document.getElementById('status').innerText = "Error: " + err.message;
+            });
         });

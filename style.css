@@ -70,13 +70,15 @@ body, html{
 .btn{
     width: 300px;
     height: 65px;
-    border: white 1px solid;
+    /* border: white 1px solid; */
+    border: none;
     border-radius: 10px;
     cursor: pointer;
     font-size: 25px;
     color: white;
     text-shadow: 2px 2px 2px black;
-    background: transparent;
+    /* background: transparent; */
+    background: grey;
 }
 .btn:hover{
     background-color: orangered;

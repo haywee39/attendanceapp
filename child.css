@@ -6,7 +6,7 @@
 
 body, html{
     scroll-behavior: smooth;
-    background: orangered;
+    /* background: orangered; */
     /* overflow-x: hidden; */
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -52,7 +52,7 @@ body, html{
   
 
 .form-cont{
-    margin-top: 5px;
+      margin-top: 5px;
     display: flex;
     flex-direction: column;
     height: auto;
